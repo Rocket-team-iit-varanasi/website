@@ -1,5 +1,4 @@
 import HeroSection from '@/app/events/solidboost/home_page_card';
-import Solidboost from '@/app/events/solidboost/home_page_card'
 
 export default function Home() {
   return (

@@ -1,15 +1,18 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
     <section className="relative isolate rounded-lg">
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/rocket-launch.jpg"
           alt="Rocket Launch"
           className="h-full w-full object-cover rounded-lg"
+          fill
+          style={{ objectFit: "cover" }}
         />
         <div className="absolute inset-0 bg-black/50 rounded-lg" />
       </div>
