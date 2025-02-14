@@ -1,3 +1,6 @@
+import HeroSection from '@/app/events/solidboost/home_page_card';
+import Solidboost from '@/app/events/solidboost/home_page_card'
+
 export default function Home() {
   return (
       <div>
@@ -14,6 +17,8 @@ export default function Home() {
             </h3>
           </div>
         </section>
+
+        <HeroSection />
 
         {/* Features Section */}
         <section id="features" className="container mx-auto px-4 py-16">

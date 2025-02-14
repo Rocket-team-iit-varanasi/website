@@ -78,3 +78,25 @@ nav li a:hover {
     @apply bg-background text-foreground;
   }
 }
+
+
+@layer components {
+  .bg-card {
+    @apply bg-gradient-to-br from-blue-100/60 to-sky-200/80;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  .button-gradient {
+    background-image: linear-gradient(
+      45deg,
+      #ff6b6b,
+      #ffb997,
+      #ff8181,
+      #ffbe9b
+    );
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+}

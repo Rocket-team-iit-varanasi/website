@@ -55,7 +55,30 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		backgroundImage: {
+			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+			'gradient-conic':
+				'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+			'card-gradient': 'linear-gradient(135deg, #d7e9fa, #e0f7fa, #f0f8ff)',
+			'button-gradient':
+				'linear-gradient(45deg, #ff6b6b, #ffb997, #ff8181, #ffbe9b)',
+		},
+		animation: {
+			'card-content': 'fadeIn 1s ease-in-out',
+			'button-pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+		},
+		keyframes: {
+			fadeIn: {
+				from: { opacity: 0, transform: 'translateY(30px)' },
+				to: { opacity: 1, transform: 'translateY(0px)' },
+			},
+			pulse: {
+					'0%': { transform: 'scale(1)', boxShadow: '0 0 0 rgba(0,0,0,0.1)' },
+					'50%': { transform: 'scale(1.05)', boxShadow: '0 0 10px rgba(0,0,0,0.2)' },
+					'100%': { transform: 'scale(1)', boxShadow: '0 0 0 rgba(0,0,0,0.1)' },
+			},
+		},
   	}
   },
   plugins: [require("tailwindcss-animate")],
