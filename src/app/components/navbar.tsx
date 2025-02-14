@@ -13,11 +13,11 @@ export default function Navbar() {
         </div>
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6">
-          <Link href="/events" className="hover:text-blue-500">Events</Link>
-          <Link href="/projects" className="hover:text-blue-500">Projects</Link>
-          <Link href="/about" className="hover:text-blue-500">About Us</Link>
-          <Link href="/blog" className="hover:text-blue-500">Blog</Link>
-          <Link href="/team" className="hover:text-blue-500">Team</Link>
+            <Link href="/events" className="hover:text-purple-500 text-black">Events</Link>
+            <Link href="/projects" className="hover:text-green-500 text-black">Projects</Link>
+            <Link href="/about" className="hover:text-yellow-500 text-black">About Us</Link>
+            <Link href="/blog" className="hover:text-red-500 text-black">Blog</Link>
+            <Link href="/team" className="hover:text-orange-500 text-black">Team</Link>
         </div>
         {/* Mobile Hamburger */}
         <div className="md:hidden">
@@ -71,11 +71,11 @@ export default function Navbar() {
           </button>
         </div>
         <div className="px-4 py-2 space-y-2">
-          <Link href="/events" className="block hover:text-blue-500" onClick={() => setIsOpen(false)}>Events</Link>
-          <Link href="/projects" className="block hover:text-blue-500" onClick={() => setIsOpen(false)}>Projects</Link>
-          <Link href="/about" className="block hover:text-blue-500" onClick={() => setIsOpen(false)}>About Us</Link>
-          <Link href="/blog" className="block hover:text-blue-500" onClick={() => setIsOpen(false)}>Blog</Link>
-          <Link href="/team" className="block hover:text-blue-500" onClick={() => setIsOpen(false)}>Team</Link>
+            <Link href="/events" className="block hover:text-purple-500" onClick={() => setIsOpen(false)}>Events</Link>
+            <Link href="/projects" className="block hover:text-green-500" onClick={() => setIsOpen(false)}>Projects</Link>
+            <Link href="/about" className="block hover:text-yellow-500" onClick={() => setIsOpen(false)}>About Us</Link>
+            <Link href="/blog" className="block hover:text-red-500" onClick={() => setIsOpen(false)}>Blog</Link>
+            <Link href="/team" className="block hover:text-orange-500" onClick={() => setIsOpen(false)}>Team</Link>
         </div>
       </div>
     </nav>
