@@ -6,6 +6,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+nav li a:hover {
+  @apply text-blue-500;
+}
+
+.post-card {
+  @apply bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
