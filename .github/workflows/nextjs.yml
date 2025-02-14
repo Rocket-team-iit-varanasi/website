@@ -24,6 +24,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# Define environment variables for Shadow CDN
+env:
+  SHADOW_CDN_ENABLED: true # Set to 'true' to enable Shadow CDN
+
+
 jobs:
   # Build job
   build:
@@ -70,7 +75,7 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
