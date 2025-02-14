@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="relative isolate rounded-lg">
       <div className="absolute inset-0">
         <Image
-          src="/rocket-launch.jpg"
+          src="./rocket-launch.jpg"
           alt="Rocket Launch"
           className="h-full w-full object-cover rounded-lg"
           fill
