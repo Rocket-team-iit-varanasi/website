@@ -1,17 +1,6 @@
-import Image from 'next/image'
 import Navbar from "./components/navbar"
 import Footer from "./components/footer"
 import './globals.css'
-
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "My Next.js App",
-  icons: {
-    icon: "/rocket-icon.png",
-    shortcut: "/rocket-icon.png",
-  },
-};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
