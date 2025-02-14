@@ -28,18 +28,20 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="absolute bottom-0 right-0 p-6">
-          <button
-            className={cn(
+          <a href="https://unstop.com/competitions/solidboost-technex25-iit-bhu-1338946" target="_blank" rel="noopener noreferrer">
+            <button
+              className={cn(
               "group relative inline-block w-48 h-12 border border-transparent text-xl font-semibold text-black shadow-lg",
-              "overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white",
+              "overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-gray-900 focus:ring-white",
               "bg-white"
-            )}
-          >
-            <span
+              )}
+            >
+              <span
               className="absolute inset-0 w-full h-full bg-black transition-transform duration-300 ease-out group-hover:translate-x-0 -translate-x-full"
-            />
-            <span className="relative z-10 group-hover:text-white">Register Now</span>
-          </button>
+              />
+              <span className="relative z-10 group-hover:text-white">Register Now</span>
+            </button>
+          </a>
         </div>
       </div>
     </section>
