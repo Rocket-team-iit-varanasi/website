@@ -76,6 +76,9 @@ jobs:
       - name: Install Radix UI package and run shadcn init
         run: |
           npm install @radix-ui/react-slot
+          if [ -f "components.json" ]; then
+            rm components.json
+          fi
           npx shadcn init
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
