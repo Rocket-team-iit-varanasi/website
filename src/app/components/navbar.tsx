@@ -13,11 +13,11 @@ export default function Navbar() {
         </div>
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6">
-            <Link href="/events" className="hover:text-purple-500 text-black">Events</Link>
-            <Link href="/projects" className="hover:text-green-500 text-black">Projects</Link>
-            <Link href="/about" className="hover:text-yellow-500 text-black">About Us</Link>
-            <Link href="/blog" className="hover:text-red-500 text-black">Blog</Link>
-            <Link href="/team" className="hover:text-orange-500 text-black">Team</Link>
+          <Link href="/events" className="hover:text-purple-500 text-black">Events</Link>
+          <Link href="/projects" className="hover:text-green-500 text-black">Projects</Link>
+          <Link href="/about" className="hover:text-yellow-500 text-black">About Us</Link>
+          <Link href="/blog" className="hover:text-red-500 text-black">Blog</Link>
+          <Link href="/team" className="hover:text-orange-500 text-black">Team</Link>
         </div>
         {/* Mobile Hamburger */}
         <div className="md:hidden">
@@ -51,13 +51,13 @@ export default function Navbar() {
         </div>
       </div>
       {/* Mobile Menu */}
-      <div className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white shadow-md transform transition-all duration-300 
-        ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
+      <div className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white shadow-md z-60 transform duration-300 ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
         <div className="px-4 pt-2 pb-4 flex items-center justify-between">
+          <div className="flex-1"></div>
           <button
             onClick={() => setIsOpen(false)}
             type="button"
-            className="focus:outline-none"
+            className="focus:outline-none ml-auto"
           >
             <svg
               className="w-6 h-6 text-gray-600"
@@ -70,12 +70,22 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        <div className="px-4 py-2 space-y-2">
-            <Link href="/events" className="block hover:text-purple-500" onClick={() => setIsOpen(false)}>Events</Link>
-            <Link href="/projects" className="block hover:text-green-500" onClick={() => setIsOpen(false)}>Projects</Link>
-            <Link href="/about" className="block hover:text-yellow-500" onClick={() => setIsOpen(false)}>About Us</Link>
-            <Link href="/blog" className="block hover:text-red-500" onClick={() => setIsOpen(false)}>Blog</Link>
-            <Link href="/team" className="block hover:text-orange-500" onClick={() => setIsOpen(false)}>Team</Link>
+        <div className="px-4 py-2 space-y-4 text-center text-2xl">
+          <Link href="/events" className="block text-2xl hover:text-purple-500" onClick={() => setIsOpen(false)}>
+            Events
+          </Link>
+          <Link href="/projects" className="block text-2xl hover:text-green-500" onClick={() => setIsOpen(false)}>
+            Projects
+          </Link>
+          <Link href="/about" className="block text-2xl hover:text-yellow-500" onClick={() => setIsOpen(false)}>
+            About Us
+          </Link>
+          <Link href="/blog" className="block text-2xl hover:text-red-500" onClick={() => setIsOpen(false)}>
+            Blog
+          </Link>
+          <Link href="/team" className="block text-2xl hover:text-orange-500" onClick={() => setIsOpen(false)}>
+            Team
+          </Link>
         </div>
       </div>
     </nav>
